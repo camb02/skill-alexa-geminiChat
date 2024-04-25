@@ -1,36 +1,36 @@
-# Alexa GeminiChat
-### Modelo de Skill Alexa para integrar o Google Gemini nos dispositivos Alexa
+#Alexa GeminiChat
+### Alexa Skill Template per integrare Google Gemini sui dispositivi Alexa
 
-**Visite o cana [Scintilla Hub](https://www.youtube.com/@scintillahub) no YouTube**
+**Visita il canale [Scintilla Hub](https://www.youtube.com/@scintillahub) su YouTube**
 
-## Requisitos
-* Com uma conta Google gere uma chave de autenticação API site da [Google AI Developer](https://ai.google.dev/). Copie e guarde a chave, elá só será visível no instante da criação.
-* Crie uma conta na [Amazon](https://www.amazon.com/ap/signin?openid.pape.preferred_auth_policies=Singlefactor&clientContext=132-2293245-7926858&openid.pape.max_auth_age=7200000&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2Falexa%2Fconsole%2Fask&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_dante_us&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&) e realize o login no _Alexa Developer Console_.
-## Criando a Skill Alexa
-Crie uma Skill Alexa-hosted (Python) na Alexa: (_Create Skill_)
+## Requisiti
+* Con un account Google, genera una chiave di autenticazione API sul sito web di [Google AI Developer] (https://ai.google.dev/). Copia e salva la chiave, sarà visibile solo al momento della creazione.
+* Crea un account su [Amazon](https://www.amazon.com/ap/signin?openid.pape.preferred_auth_policies=Singlefactor&clientContext=132-2293245-7926858&openid.pape.max_auth_age=7200000&openid.return_to=https%3A%2F %2Fdeveloper.amazon.com%2Falexa%2Fconsole%2Fask&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier _select&openid.assoc_handle=amzn_dante_us&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&openid.claimed_id=http% 3A %2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&) e accedi alla _Console per sviluppatori Alexa_.
+## Creazione dell'abilità Alexa
+Creare una Skill ospitata da Alexa (Python) su Alexa: (_Create Skill_)
 
-1. Name your Skill: Escolha um nome de sua preferência (Ex: GeminiGPT)
-2. Choose a primary locale: Portuguese (BR)
-3. Clique em _Next_. Em tipo de experiência selecione: Other > Custom > _Alexa-hosted (Python)_
-4. _Hosting region_: Pode deixar o padrão _US East (N. Virginia)_
-5. Em _Templates_: Clique em _Import Skill_
-6. Insira o endereço do repositório: https://github.com/Machally/skill-alexa-geminiChat.git e confirme.
+1. Dai un nome alla tua abilità: scegli un nome a tua scelta (Es: GeminiGPT)
+2. Scegli una lingua principale: Italiano 
+3. Fare clic su _Avanti_. Nel tipo di esperienza seleziona: Altro > Personalizzata > _Ospitato su Alexa (Python)_
+4. _Regione di hosting_: puoi lasciare la regione predefinita _Stati Uniti orientali (Virginia settentrionale)_
+5. In _Modelli_: fai clic su _Importa competenza_
+6. Inserisci l'indirizzo del repository: https://github.com/camb02/skill-alexa-geminiChat.git e conferma.
 
-## Configurando a Skill
-Ao finalizar a importação em _Invocations_ > _Skill Invocation Name_:
-1. Edite _Skill Invocation Name_. Este será o comando de invocação para sua skill. Se atende para os requisitos e restrições de palavras
-2. Clique em _Save_
-3. Realize o Build da Skill clicando em _Build Skill_. Ao finalizar, vá para a aba **Code**
-4. Crie um arquivo dentro da pasta Lambda chamado _.env_ e adicione a linha, adicionando a API key gerada:
-   ```shell
-   GOOGLE_API_KEY=SuaApiKeyGoogleAI
-   ```
-5. Clique em _Save_ e então em _Deploy_
+## Configurazione dell'abilità
+Al termine dell'importazione in _Invocazioni_ > _Nome chiamata abilità_:
+1. Modifica _Nome chiamata abilità_. Questo sarà il comando di invocazione per la tua abilità. Soddisfa i requisiti e le restrizioni sulle parole
+2. Fai clic su _Salva_
+3. Sviluppa l'abilità facendo clic su _Crea abilità_. Al termine, vai alla scheda **Codice**
+4. Crea un file all'interno della cartella Lambda chiamato _.env_ e aggiungi la riga, aggiungendo la chiave API generata:
+    "conchiglia".
+    GOOGLE_API_KEY=YourApiKeyGoogleAI
+    ```
+5. Fai clic su _Salva_ e poi su _Distribuisci_
    
-## Teste da Skill
-Ao finalizar o _deploy_ vá para aba **Test**:
-1. Em _Skill testing is enabled in_ mude de _Off_ para _Development_
-2. Para usar comandos de voz aceite a requisição de uso do microfone pelo site, e para falar clique e segure o ícone de mic, e solte para enviar
-3. Use comando de ativação configurado para iniciar a Skill, e pronto está interagindo com o Gemini pela Alexa!
+## Prova di abilità
+Al termine della _deploy_, vai alla scheda **Test**:
+1. In _Il test delle competenze è abilitato nel_ passaggio da _Off_ a _Sviluppo_
+2. Per utilizzare i comandi vocali, accetta la richiesta del sito Web di utilizzare il microfono e, per parlare, fai clic e tieni premuta l'icona del microfono e rilascia per inviare
+3. Utilizza il comando di attivazione configurato per avviare la Skill e sei pronto per interagire con Gemini tramite Alexa!
 
-A Skill já estará disponível em todos os dispositivos Alexa vinculados a sua conta.
+La Skill sarà ora disponibile su tutti i dispositivi Alexa collegati al tuo account.
